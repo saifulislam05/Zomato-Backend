@@ -9,6 +9,7 @@ const authCheck = (role) => async(req, res, next) => {
       const data = jwt.verify(tokenFromHeader, process.env.TOKEN_SECRET_KEY);
       const payload = jwt.decode(tokenFromHeader);
     const hasPermission = role.includes(payload.role);
+
     if (!data && !hasPermission) {
       return res.status(403).json({
         success: false,
@@ -22,6 +23,7 @@ const authCheck = (role) => async(req, res, next) => {
       
     
   } catch (error) {
+    
     return res.status(401).json({
       success: false,
       message: "Please login",

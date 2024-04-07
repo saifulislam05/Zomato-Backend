@@ -17,7 +17,7 @@ router.post("/signup", signup)
 
 router.post("/login", login);
 
-http: router.post("/logout", authCheck(["admin", "seller", "buyer"]), logout);
+router.post("/logout", authCheck(["admin", "seller", "buyer"]), logout);
 
 router.get("/", authCheck(["admin"]), getAllUser);
 

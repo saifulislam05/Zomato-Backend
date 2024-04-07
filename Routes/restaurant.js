@@ -1,6 +1,6 @@
 import express from "express";
 import Restaurant from "../models/Restaurant.js"; // Import the model
-import {restaurants} from "../../Frontend/src/data/restaurants.js"; // Assuming you export your data from a file
+
 
 const router = express.Router();
 

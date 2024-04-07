@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import userRoutes from "./Routes/user.js";
 import dataUploadRoutes from "./Routes/restaurant.js";
+import foodRoutes from "./Routes/food.js";
 
 import dotenv from "dotenv";
 dotenv.config();
@@ -22,6 +23,7 @@ mongoose
 app.use("/v1/api/user", userRoutes);
 
 app.use("/v1/api/restaurant", dataUploadRoutes);
+app.use("/v1/api/food", foodRoutes);
 //localhost:10000/v1/api
 
 http: app.listen(process.env.PORT, () =>
