@@ -1,6 +1,5 @@
 
 import FoodCategory from "../../models/food.js";
-import { foodItemsData } from "../../orderOnline.js";
 
 
 const uploadFoods = async (req, res) => {
